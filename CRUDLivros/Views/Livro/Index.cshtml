@@ -1,0 +1,19 @@
+@model IEnumerable<CRUDLivros.Models.Livro>
+
+    <h2>Todos os Livros</h2>
+
+    <a href="/Livro/Cadastrar" class="btn btn-success">Novo livro</a>
+
+    <hr>
+    @foreach(var livro in Model) 
+    {
+        <p>Título: @livro.Titulo</p>
+        <p>Autor: @livro.Autor</p>
+        <p>Editora: @livro.Editora</p>
+        <p>Ano: @livro.Ano</p>
+        <p>Gênero: @livro.Genero</p>
+        <a href="/Livro/Editar/@livro.Id" class="btn btn-success">Editar</a>
+        <a href="/Livro/Deletar/@livro.Id" class="btn btn-danger">Deletar</a>
+        <hr>
+        
+    }

@@ -1,0 +1,14 @@
+@model CRUDLivros.Models.Livro;
+
+<h2>Cadastro Livros</h2>
+
+<form class="form-horizontal" asp-controller="Livro" asp-action="Salvar" method="POST">
+<input type="hidden" asp-for="Id"> 
+<input type="text" class="form-control" asp-for="Titulo" placeholder="Título"> 
+<input type="text" class="form-control" asp-for="Autor" placeholder="Autor"> 
+<input type="text" class="form-control" asp-for="Editora" placeholder="Editora"> 
+<input type="text" class="form-control" asp-for="Ano" placeholder="Ano"> 
+<input type="text" class="form-control" asp-for="Genero" placeholder="Gênero"> 
+<button class="btn btn-success">Cadastrar</button>
+
+</form>
